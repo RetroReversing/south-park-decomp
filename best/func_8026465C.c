@@ -1,0 +1,1 @@
+void func_8026465C(void *a, void *b, s32 c, s32 d){ *(volatile s32*)((char*)a+0xC)=d; *(s32*)((char*)b+0x158)=0;*(s32*)((char*)b+0x15c)=0;*(s32*)((char*)b+0x160)=0;*(s32*)((char*)b+0x164)=0;*(s32*)((char*)b+0x168)=0;*(s32*)((char*)b+0x16c)=0;}

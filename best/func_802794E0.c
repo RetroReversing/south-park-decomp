@@ -1,0 +1,1 @@
+void *D_80203B70(s32 *); extern s32 D_800CCA80; s32 func_802794E0(void *arg0) { s32 result; void *temp_v0; temp_v0=D_80203B70(&D_800CCA80); if(temp_v0==NULL || ((*(s32*)((u8*)temp_v0+0x44)&0x4000)==0)) result=(s32)*(s8*)((u8*)*(void**)((u8*)arg0+4)+6); else result=0; return result; }

@@ -1,0 +1,2 @@
+extern u32 D_800F6050; extern u8 D_800F6090; extern void func_8029C5A4(); extern s32 func_8029C638(); extern void func_8029DC78(); extern void func_8029AE3C(); extern s32 func_8029C610();
+s32 func_8029AD10(s32 arg0) { s32 r; u8 *state; s32 init; state=&D_800F6090; init=1; func_8029C5A4(); if(*state!=init){func_8029AE3C();func_8029C638(init,&D_800F6050);func_8029DC78(arg0,0);} r=func_8029C638(0,&D_800F6050);*state=init;func_8029C610();return r;}

@@ -1,0 +1,2 @@
+extern void D_802131C4(f32 *, void *, s32); extern f32 func_8029AA80(f32); extern f64 D_800A9A30;
+f32 func_8025FC20(void *arg0,s32 arg1){f32 v[3]; f32 sum; f64 d; s32 n; void *p; n=*(s32*)((char*)arg0+0x30); if(n==0)return 0.0f; p=*(void**)((char*)arg0+0x20); sum=0.0f; if(p){do{D_802131C4(v,(char*)p+0x134,arg1); {f32 x=v[0],y=v[1],z=v[2]; sum+=func_8029AA80(x*x+y*y+z*z);} p=*(void**)((char*)p+4);}while(p);} n=*(s32*)((char*)arg0+0x30); d=(f64)n; if(n<0)d+=D_800A9A30; return sum/(f32)d;}

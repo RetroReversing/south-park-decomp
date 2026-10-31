@@ -1,0 +1,3 @@
+extern int D_800B4984; extern void *D_800F9978; extern void func_8029D9A8(int,unsigned*); extern void func_8026AC4C(void*,int,int); extern int func_802A0500(void); extern void D_802A0520(int,void*);
+struct Task { int next; unsigned char b4; unsigned char pad5[7]; unsigned c; unsigned status; unsigned char b10[8]; };
+void *func_8029FB10(void) { unsigned sp10=0; struct Task *p=(struct Task*)&D_800F9978; void *old; int id; if(p->c!=0xB0000000){p->b4=0;p->c=0xB0000000;func_8029D9A8(0,&sp10); p->b10[1]=0;p->status=0;p->b4=sp10>>24;p->b10[0]=sp10>>8;p->b10[2]=(sp10>>16)&15;p->b10[3]=(sp10>>20)&15;func_8026AC4C(p->b10+4,0,0x60);id=func_802A0500();old=(void*)D_800B4984;D_800B4984=(int)p;p->next=(int)old;D_802A0520(id,old);} return p;}

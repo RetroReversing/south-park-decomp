@@ -1,0 +1,1 @@
+typedef struct{char pad[0x1B4];s32 flag;s32 *count;} E; typedef struct{char pad0[8];void *p8;char pad1[0x10];void *p1C;} H; extern void D_8021E930(void*,void*);extern void D_8021E76C(void*,void*); void func_8025A118(H*h,E*e){if(e->flag&1){e->flag&=~1;if(e->count)*e->count-=1;D_8021E930(&h->p1C,e);D_8021E76C(&h->p8,e);}}

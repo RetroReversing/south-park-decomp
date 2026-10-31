@@ -1,0 +1,15 @@
+*.z64
+*.n64
+*.v64
+*.rom
+*.bin
+*.o
+*.elf
+asm/
+assets/
+build/
+.decomp/
+.local/
+.venv/
+__pycache__/
+.DS_Store

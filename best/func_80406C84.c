@@ -1,0 +1,2 @@
+extern u8 D_800D7801[]; extern u8 D_800D77EF,D_800D77F1; extern u8 D_800EE468[]; extern s32 D_415E38; extern s32 D_800BF2BC[]; s32 D_8022D09C(void*); s32 func_80403D34(s32,s32,s32*);
+void func_80406C84(s32 unused,s32 a1,s32 a2){s32 i; s32 off; s32 count;u8*p; s32 one=1; count=3;off=0x36;do{D_800D7801[off]=0;count--;off-=0x12;}while(count>=0);i=0;p=D_800EE468;while(i<4){if(D_8022D09C(p) == 0){i++;p+=0x230;}else{D_800D77EF=one;D_800D77F1=i;break;}}D_800BF2BC[0]=(s32)&D_415E38;func_80403D34(a2,a1,&D_800BF2BC[-9]);}

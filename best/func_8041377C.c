@@ -1,0 +1,1 @@
+void func_8041377C(void *arg0,void **arg1){s32 n=0,m=0,q=0,z=0;volatile s32 pad[8];void *a,*b,*c,*d,*e,*f,*g;pad[0]=0;if(D_80222FA0(arg1,1)){a=**(void***)arg1;b=D_80210AF0(a,0,&n);c=D_80210AF0(a,1,&m);d=D_80210ADC(a,2);q=((s32*)d)[1];e=D_80210AF0(a,3,&z);f=D_802223EC(0,arg1,n+m+24+((q<<5)|8)+z);if(f){g=*(void**)f;D_80210C34(b,(char*)g+24,0);}D_80221E20(0,arg1,f);}}

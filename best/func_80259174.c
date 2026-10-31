@@ -1,0 +1,1 @@
+extern s32 func_8029CC68(void); extern s32 D_800D7CB0,D_800D7CB8; typedef struct{s32 unkC;}Ent; Ent*func_80259174(Ent*p){if(p==0)return 0; if(p->unkC==D_800D7CB8)goto fail; if(p->unkC==func_8029CC68())goto fail; if(p->unkC!=D_800D7CB0)goto fail; return p; fail:return 0;}

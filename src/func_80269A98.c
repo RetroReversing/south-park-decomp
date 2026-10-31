@@ -1,0 +1,1 @@
+void func_80269A98(void *arg0, s32 arg1, s32 arg2) { f32 a=arg1; f32 b=arg2; *(s32*)((u8*)arg0+4)=0; *(s32*)((u8*)arg0+8)=0; *(f32*)((u8*)arg0+0xC)=a; *(f32*)((u8*)arg0+0x10)=b; *(f32*)((u8*)arg0+0x14)=a; *(f32*)((u8*)arg0+0x18)=b; }

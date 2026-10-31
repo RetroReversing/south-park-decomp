@@ -1,0 +1,7 @@
+typedef struct { char pad[0xB8]; } Entry; typedef struct { char pad[0x84]; char pad1[0x7E]; s16 unk102; char pad2[0x19C]; f32 scale0; char pad3[4]; f32 scale1; } Obj;
+extern s32 func_80272488(void*,s16); extern void func_802724F0(void*,s16); extern void func_80274D6C(void*,s16); extern void func_802963D8(void*,u8); extern void func_80296428(void*,u8); extern void func_80296478(void*,s32); extern void D_80296500(void*,s16);
+s32 func_8026F21C(Obj *a,s32 id) {
+char *__repair_addr;
+ s32 i=0,flags; Entry *e=(Entry*)((char*)a+0x1B14); void *p; f32 factor,value; if(id==-1)return -1; while(i<17&&*(s32*)((char*)e+0xC)!=id){i++;e=(Entry*)((char*)e+0xB8);} if(i>=17)i=-1; if(i==-1)return -1; if(i==16){func_80274D6C((char*)a+0x138,16);return -1;} e=(Entry*)((char*)a+0x1B24+i*0xB8); if(*(s32*)((char*)e+8)==0){
+__repair_addr = (char *)((char*)a+i*0xB8+0x1BB4);
+flags=*(s32*)(__repair_addr);if(!(flags&4)){*(s32*)((char*)a+i*0xB8+0x1BB4)=flags|8;a->unk102=-1;return 0;}} p=(char*)a+0x84; if(func_80272488((char*)a+0x1B10,(s16)i)==0){func_80296478(p,*(s32*)((char*)e+0x14));func_802963D8(p,*((u8*)e+0x11));func_80296428(p,*((u8*)e+0x19));flags=*(s32*)((char*)a+i*0xB8+0x1BB4);factor=(flags&0x200)?*(f32*)((char*)a+0x27A8):*(f32*)((char*)a+0x27A0);value=(f32)*(s32*)((char*)e+8)*factor**(f32*)((char*)e+0x1C);D_80296500(p,(s16)(s32)value);if(*(s32*)((char*)a+i*0xB8+0x1BB0)<=0)func_802724F0((char*)a+0x1B10,(s16)i);} a->unk102=-1;return 0;}

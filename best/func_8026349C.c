@@ -1,0 +1,2 @@
+extern void func_8025F708(void); typedef struct {char pad[0xF4]; s32 flags; char p[0x34]; s32 active;} Obj; typedef struct {u8 type;char p[1];u16 id;char p2[0x104];Obj*parent;char p3[0xCC];s32 mode; s32 next;} Param;
+extern f32 D_800A9B18,D_800A9B1C; void func_8026349C(Obj*a0,Param*a1,s32 a2,s32 a3,s32 x,s32 y,s32 z,s32 w,s32 c,s32 p,s32 flags){s32 i;f32 xx,yy;volatile s32 scratch[0x52];xx=(f32)*(s16*)((u8*)&flags+8)*D_800A9B18;yy=(f32)*(s16*)((u8*)&flags+10)*D_800A9B1C;for(i=0;i<0x52;i++)scratch[i]=0;if(a0->flags&0x18000000){if(a0->active)func_8025F708();}}

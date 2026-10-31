@@ -1,0 +1,5 @@
+extern s32 D_800E6FC8; extern u8 D_800F604C; extern s8 D_800F6090; extern s32 D_8010E858; s32 D_8021EE94(s32*,s32,s32,s32); void *D_80210ADC(s32,s32); s32 D_8026ACD8(void*,s32,s32,s32,s32); s32 D_80222FA0(void*,s32);
+void func_804146B0(void*a){void*p=*(void**)((u8*)a+0xd4);D_8021EE94(&D_800E6FC8,*(s32*)((u8*)a+0x30),*(s32*)((u8*)a+0x34),*(s32*)p);*(s32*)((u8*)a+8)=1;}
+s32 func_80414820(void*a,s32 b,s32 c,s32 d){void*p=D_80210ADC(*(s32*)((u8*)a+0x60),0);s32 q=*(s32*)((u8*)p+4);void*r=D_80210ADC(*(s32*)((u8*)a+0x60),1);s32 z=func_8026ACD8((u8*)r+8,q,b,c,d);return z?(s32)((u8*)r+8):0;}
+void func_80414C0C(void*a,void*b){s32 ok=D_80222FA0(b,0);if(ok){s32*p=*(s32**)*(s32**)b;s32 n=*p; s32 i=0;if(n>0)do{D_80210ADC((s32)p,i);i++;}while(i<n);}}
+void func_80411184(s8 a){s8 vals[8];s32 i=0;D_800F6090=a;*(s32*)((u8*)&D_8010E858+0x3c)=1;vals[0]=-1;vals[1]=1;vals[2]=3;vals[3]=a;vals[4]=-1;vals[5]=-1;vals[6]=-1;vals[7]=-1;while(i<D_800F604C){*(u32*)((u8*)&D_8010E858+i*8)=*(u32*)vals;*(u32*)((u8*)&D_8010E858+i*8+4)=*(u32*)(vals+4);i++;}*(s8*)((u8*)&D_8010E858+i*8)=-2;}

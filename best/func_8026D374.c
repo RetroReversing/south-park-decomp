@@ -1,0 +1,1 @@
+extern s32 D_800A9E08[3]; s32 func_8026D374(void *a0,f32 x,f32 y){s32 i=0; s32 *idx=D_800A9E08; f32 z=0; if(!a0)return 1;while(i<3){void *p=*(void **)((u8 *)a0+idx[i]*4+4);void *q=*(void **)((u8 *)a0+i*4+4);f32 qx=*(f32 *)q,qy=*(f32 *)((u8 *)q+8),px=*(f32 *)p,py=*(f32 *)((u8 *)p+8);if((py-qy)*(x-qx)+(qx-px)*(y-qy)<z)return 0;i++;}return 1;}

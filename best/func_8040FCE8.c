@@ -1,0 +1,1 @@
+extern s32 func_8029C018(s32,s32,s32,s32,s32); extern s32 func_8041249C(); typedef struct{s32 f4; s32 f8;char padC[0x59];u8 f65;}Obj; void func_8040FCE8(Obj*p,s32 a1,s32 a2,u8 a3){s32 i,v;u16 base;p->f65=a3;v=func_8041249C(p);if(v!=0)return;i=0;a1<<=3;base=a1;for(;;){v=func_8029C018(p->f4,p->f8,base,a2,0);i++;if(v)break;if(i>=8)break;base=a1+i;}p->f65=0;func_8041249C(p);}

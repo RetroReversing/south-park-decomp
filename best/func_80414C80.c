@@ -1,0 +1,3 @@
+s32 *D_80210ADC(s32 *, s32); s32 D_80215188(s32 *); s32 D_80222FA0(s32 ***, s32);
+void func_80414C80(void *arg0,s32 ***arg1){s32 *temp_s5,*temp_v0; char *var_s0; s32 temp_s1,temp_s4,temp_s6,var_s2,var_s3;
+if(D_80222FA0(arg1,0)!=0){temp_s5=**arg1;temp_s6=*temp_s5;var_s3=0;if(temp_s6>0){do{temp_v0=D_80210ADC(D_80210ADC(temp_s5,var_s3),1);temp_s4=*(s32*)((char*)temp_v0+4);var_s2=0;if(temp_s4>0){var_s0=(char*)temp_v0+0x18;do{temp_s1=*(s32*)(var_s0-4);if(temp_s1!=-1)*(s32*)(var_s0-4)=(s32)(D_80210ADC(*(s32**)((char*)arg0+0x5c),2)+8+(temp_s1<<5));else *(s32*)(var_s0-4)=0;D_80215188((s32*)var_s0);var_s2++;var_s0+=0x1c;}while(var_s2<temp_s4);}var_s3++;}while(var_s3<temp_s6);}*(s32**)((char*)arg0+0x6c)=temp_s5;}}

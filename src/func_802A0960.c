@@ -1,0 +1,1 @@
+u8 *func_802A0960(u8 *arg0, s32 arg1) { u8 *var_v0=arg0; u8 var_v1=*var_v0; s32 temp_a1=arg1&0xFF; if(var_v1!=temp_a1){ loop_1: if(var_v1==0) return NULL; var_v0++; var_v1=*var_v0; if(var_v1!=temp_a1) goto loop_1; } return var_v0; }

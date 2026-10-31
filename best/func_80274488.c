@@ -1,0 +1,4 @@
+s32 func_80274290(void){extern volatile s32 D_800F3A04; return D_800F3A04;}
+void func_802743B8(void){extern int func_802706EC(void*,s32); extern u8 D_800F1F20[]; func_802706EC(D_800F1F20,1);}
+void func_80274488(void *arg0,void *arg1,s32 arg2){extern void D_8021E6F8(void*,s32,s32);extern void D_8021E76C(void*,void*);s32 i;u8 *p=arg1;D_8021E6F8(arg0,0,4);D_8021E6F8((u8*)arg0+0x14,0,4);i=0;if(arg2>0){do{D_8021E76C(arg0,p);i++;p+=0x24;}while(i<arg2);}*(s32*)((u8*)arg0+0x28)=0;}
+s32 func_802745E4(void *arg0,void *arg1){extern s32 func_80274198(s32);extern void D_8021E930(void*,void*);extern void D_8021E76C(void*,void*);extern s32 D_800B215C;void *p;if(arg1==0)return 0;p=*(void**)((u8*)arg0+0x14);if(p==0)return 0;while(p!=arg1){p=*(void**)((u8*)p+4);if(p==0)return 0;}func_80274198(*(s32*)((u8*)p+8));D_800B215C=*(s32*)((u8*)p+8);D_8021E930((u8*)arg0+0x14,p);D_8021E76C(arg0,p);return 1;}

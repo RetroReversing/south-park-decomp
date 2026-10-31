@@ -1,0 +1,1 @@
+typedef struct {u8 pad[4];s32 f4,f8,fc;} Arg; extern s32 D_800CCA80; extern void D_80203F74(s32*,void*,s32); typedef struct {s32 a,b;} Pair; extern void func_80263BAC(void*,void*,s32,s32,Pair,Pair); void func_8024CD20(Arg *p){ Arg *q=p; Pair z={0,0}; func_80263BAC(p,q,7,p->f4,z,z); D_80203F74(&D_800CCA80,p,0); }

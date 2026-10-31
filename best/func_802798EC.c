@@ -1,0 +1,1 @@
+typedef struct V{f32 x,y,z;}V;extern void D_802131C4(V*,V*,V*);s32 func_802798EC(V *arg0,f32 a1,f32 a2,f32 a3){s32 i=0;V *p=arg0;V x,y;while(i<4){s32 j=i;if(i!=3)j=i+1;D_802131C4(&x,arg0+j,p);D_802131C4(&y,(V*)&a1,p);if(x.x*y.x+x.y*y.y+x.z*y.z<0.0f)return 0;i++;p=(V*)((char*)p+12);}return 1;}

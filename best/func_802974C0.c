@@ -1,0 +1,9 @@
+s32 func_80298980(s32,s32,const char*,s32); extern char D_00299678[]; s32 *func_80293970(s32,s32,s32,s32,s32); extern s32 D_00298D90,D_00299134; extern s32 D_800AAD60[],D_800B37B8[],D_800B3820[],D_800B38A8[],D_800B38D0[],D_800B38F8[],D_800B3920[]; extern f64 D_800AAD78,D_800AAD88,D_800AAD98; extern f32 D_800AAD80,D_800AAD90,D_800AAD94;
+typedef struct {s32 x,unk4,unk8,unkC,unk10;s32 *buf;s32 *unk20p;s32 *unk14,*unk18;s32 unk1C;s32 *unk20;u8 unk24;u8 pad[3];s32 *unk28,*unk2C,*unk30,*unk34,*unk38;s32 unk3C,unk40,unk44,unk48;} Out;
+typedef struct {s32 a0,a4,a8,aC,a10,a14;u8 pad[4];u8 kind;u8 pad2[3];f32 scale;s32 ptr;} Cfg;
+void func_802974C0(Out *o,Cfg *cfg,s32 id){s32 *table; u8 i,j; s32 *p,*q; f32 f; long long pad[1]; s32 a,b,c,d,e;
+func_80298980(0,0,D_00299678,5);o->buf=(s32*)&D_00298D90;o->unk28=(s32*)D_00299134;
+switch(cfg->kind){case 1:table=D_800B37B8;break;case 2:table=D_800B3820;break;case 3:table=D_800B38A8;break;case 4:table=D_800B38D0;break;case 5:table=D_800B38F8;break;case 6:table=(s32*)cfg->ptr;break;default:table=D_800B3920;break;}
+o->unk24=*(u8*)((u8*)table+3);o->unk1C=*(s32*)((u8*)table+4);o->unk20=(s32*)func_80293970(0,0,id,o->unk24,0x28);p=func_80293970(0,0,id,o->unk1C,2);o->unk14=p;o->unk18=p;for(i=0;i<o->unk1C;i++)((s16*)p)[i]=0;
+if(o->unk24){i=0;j=1;do{s32*dst=(s32*)((u8*)o->unk20+i*0x28);a=table[j];b=table[j+1];c=table[j+2];d=table[j+3];e=table[j+4];dst[0]=a;dst[1]=b;*(s16*)((u8*)dst+10)=*(s16*)&c;*(s16*)((u8*)dst+8)=*(s16*)&d;*(s16*)((u8*)dst+12)=*(s16*)&e;if(table[j+5]){f=(f32)table[j+4]*D_800AAD80;dst[4]=0;*(f32*)((u8*)dst+16)=f/(f32)cfg->scale;q=func_80293970(0,0,id,1,0x34);dst[9]=(s32)q;q=func_80293970(0,0,id,1,0x20);((s32*)dst[9])[5]=(s32)q;((s32*)dst[9])[8]=0;((s32*)dst[9])[9]=1;}else dst[9]=0;if(table[j+6]){q=func_80293970(0,0,id,1,0x30);dst[8]=(s32)q;q=func_80293970(0,0,id,1,8);((s32*)dst[8])[10]=(s32)q;((s32*)dst[8])[0]=(s16)table[j+6];}else dst[8]=0;j+=6;i++;}while(i<o->unk24);}
+}

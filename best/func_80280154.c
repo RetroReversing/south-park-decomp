@@ -1,0 +1,5 @@
+extern u32 func_80280B98(s32*,u32); extern f32 D_800AA284,D_800AA288,D_800AA298,D_800AA29C; extern f64 D_800AA290; void func_80280154(void *p){
+char *__repair_addr;
+s32 sp10; f32 ft0,ft0f,ft1,ft1f,fv0,fv0_2,fv0_3,fv0f,fv1f; f64 fv1; s32 s3,s1,s0,s2,s5,v0;
+__repair_addr = (char *)((char*)p);
+ s3=*(s32*)(__repair_addr);sp10=*(s32*)((char*)p+0xc)+*(s32*)((char*)p+0x28)*(s3*4+6);s5=func_80280B98(&sp10,6);s1=func_80280B98(&sp10,s3);s0=func_80280B98(&sp10,s3);s2=func_80280B98(&sp10,s3);v0=func_80280B98(&sp10,s3);ft1=(f32)s1;ft1f=(f32)((s0<<5)-s1*35-s2*12+v0);ft0f=(f32)(s1*14-(s0<<5)+s2*20-v0*2);ft0f*=D_800AA284;ft0=(f32)((s0<<6)-s1*24-s2*48+v0*8)*D_800AA284;if(s3)fv1f=*(f32*)((char*)p+8)/(f32)((1<<s3)-1);else{fv0=*(f32*)((char*)p+8)*D_800AA288;*(f32*)((char*)p+8)=0.0f;fv1f=*(f32*)((char*)p+8);*(f32*)((char*)p+4)=*(f32*)((char*)p+4)+fv0;}ft1*=fv1f;if(s5>=2){fv1=(f64)s5;if((s32)s5<0)fv1+=D_800AA290;fv0f=D_800AA298/((f32)fv1-D_800AA298);}else fv0f=D_800AA29C;fv0_2=fv0f*fv1f;fv0_3=fv0_2*fv0f;*(s32*)((char*)p+0x20)=s5;*(f32*)((char*)p+0x14)=ft0f*fv0_2;*(f32*)((char*)p+0x10)=ft1+*(f32*)((char*)p+4);*(f32*)((char*)p+0x18)=ft1f*fv0_3;*(f32*)((char*)p+0x1c)=ft0*fv0f*fv0_3;}

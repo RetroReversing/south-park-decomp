@@ -1,0 +1,1 @@
+extern u8 D_800AAAA0[]; extern void *D_8022154C(s32,s32,s32,void*); void *func_8028FE6C(s32 a){ void **p; void **q; p=D_8022154C(0,a+0x10,0x13,D_800AAAA0); if(p==0)return 0; q=*p; *q=p; return (u8*)q+0x10; }
